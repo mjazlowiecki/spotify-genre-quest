@@ -1,5 +1,8 @@
+.venv/
+.idea/
 .env
 .cache
 data/
 *.sqlite
 *.sqlite3
+__pycache__/
