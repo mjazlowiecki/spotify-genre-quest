@@ -25,14 +25,18 @@ playlist flows logically through genre space.
 
 ## Status
 
-Work in progress.
-
-- [ ] Verify which Spotify API endpoints still work in Development Mode
-- [ ] Genre and artist data collection
+- [x] Verify which Spotify API endpoints still work in Development Mode
+- [ ] Genre and artist data collection (in progress)
 - [ ] Set-cover selection + coverage curve
 - [ ] Track selection and ordering
 - [ ] Playlist generation
 - [ ] Progress tracker
+
+## Findings
+
+- In Development Mode the artist object no longer includes `genres`, so genres cannot be read from the Spotify API.
+- `recommendations/available-genre-seeds` and artist top tracks are unavailable.
+- Every Noise at Once (snapshot through 2023-11-19, 6,291 genres) exposes Spotify artist and example-track IDs for each genre. These IDs were verified against the Spotify API: artist and track lookups work and tracks are playable.
 
 ## Limitations
 
