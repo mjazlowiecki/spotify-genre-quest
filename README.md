@@ -50,6 +50,12 @@ playlist flows logically through genre space.
 This is an unofficial hobby project and is not affiliated with or endorsed by Spotify.
 No Spotify data is redistributed in this repository.
 
+## Acknowledgements
+
+Genre data comes from [Every Noise at Once](https://everynoise.com/) by Glenn McDonald:
+a snapshot of Spotify's genre taxonomy through 2023-11-19. This project is not affiliated
+with him or with Spotify.
+
 ## License
 
 MIT, see [LICENSE](LICENSE). The license covers the code only.
