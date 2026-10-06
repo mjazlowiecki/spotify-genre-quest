@@ -17,18 +17,18 @@ playlist flows logically through genre space.
 
 ## Approach
 
-1. **Collect** the genre list and the genre → artist mapping (Every Noise at Once snapshot).
-2. **Select** artists with a greedy set-cover algorithm.
-3. **Pick** one representative track per artist via the Spotify Web API.
-4. **Order** tracks along a path through the genre map (nearest-neighbour heuristic).
-5. **Build** the playlist and **track progress** from Spotify's extended streaming history.
+1. **Collect** the genre map (names, positions, example tracks) from an Every Noise at Once snapshot.
+2. **Baseline:** one example track per genre, ordered along a path through the genre map (nearest-neighbour heuristic).
+3. **Optimization (planned):** greedy set cover over per-genre artist lists, covering the same genres with fewer tracks.
+4. **Verify** track availability via the Spotify Web API and **build** the playlist.
+5. **Track progress** from Spotify's extended streaming history.
 
 ## Status
 
 - [x] Verify which Spotify API endpoints still work in Development Mode
-- [ ] Genre and artist data collection (in progress)
-- [ ] Set-cover selection + coverage curve
-- [ ] Track selection and ordering
+- [x] Genre map collection (6,291 genres)
+- [ ] Baseline playlist: one track per genre, ordered along the genre map
+- [ ] Set-cover optimization + coverage curve
 - [ ] Playlist generation
 - [ ] Progress tracker
 
@@ -48,7 +48,7 @@ playlist flows logically through genre space.
 ## Disclaimer
 
 This is an unofficial hobby project and is not affiliated with or endorsed by Spotify.
-No Spotify data is redistributed in this repository.
+No Spotify or Every Noise data is redistributed in this repository.
 
 ## Acknowledgements
 
