@@ -28,7 +28,7 @@ playlist flows logically through genre space.
 - [x] Verify which Spotify API endpoints still work in Development Mode
 - [x] Genre map collection (6,291 genres)
 - [ ] Baseline playlist: one track per genre, ordered along the genre map
-- [ ] Set-cover optimization + coverage curve
+- [x] Set-cover optimization + coverage curve
 - [ ] Playlist generation
 - [ ] Progress tracker
 
@@ -44,6 +44,21 @@ playlist flows logically through genre space.
   taxonomy keeps changing, so coverage against today's genres is approximate.
 - Spotify's Web API has become more restricted in recent years; parts of the pipeline
   may need to adapt.
+
+## Results
+
+| | Tracks | Listening time* |
+|---|---|---|
+| One track per genre (baseline) | 6,291 | ~367 h |
+| Greedy set cover | 2,697 | ~157 h |
+
+\*Assuming 3.5 minutes per track (the data has no track durations).
+
+All 6,291 genres of the snapshot are covered by 2,697 artists (43% of the baseline).
+About a third of the picks (925) each add only a single new genre: the long tail.
+Artists without an example track in the snapshot (~24k of ~481k) were excluded.
+
+![Coverage curve](docs/coverage.png)
 
 ## Disclaimer
 
