@@ -57,6 +57,7 @@ playlist flows logically through genre space.
 All 6,291 genres of the snapshot are covered by 2,697 artists (43% of the baseline).
 About a third of the picks (925) each add only a single new genre: the long tail.
 Artists without an example track in the snapshot (~24k of ~481k) were excluded.
+16 artists whose example tracks were unavailable in Poland were excluded.
 
 ![Coverage curve](docs/coverage.png)
 

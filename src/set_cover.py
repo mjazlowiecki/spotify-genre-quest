@@ -17,7 +17,8 @@ def load(con):
         rows = con.execute(
             "SELECT ga.artist_id, ga.page, COALESCE(ga.size, 100) "
             "FROM genre_artists ga JOIN artists a ON a.artist_id = ga.artist_id "
-            "WHERE a.track_id IS NOT NULL"
+            "WHERE a.track_id IS NOT NULL "
+            "AND ga.artist_id NOT IN (SELECT artist_id FROM unplayable)"
         )
         for artist_id, page, size in rows:
             artist_genres[artist_id][page] = size

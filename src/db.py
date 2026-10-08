@@ -17,6 +17,9 @@ CREATE TABLE IF NOT EXISTS genre_artists (
     page TEXT, artist_id TEXT, size INTEGER, PRIMARY KEY (page, artist_id)
 );
 CREATE TABLE IF NOT EXISTS fetched (page TEXT PRIMARY KEY);
+
+CREATE TABLE IF NOT EXISTS availability (track_id TEXT PRIMARY KEY, playable INTEGER);
+CREATE TABLE IF NOT EXISTS unplayable (artist_id TEXT PRIMARY KEY);
 """
 
 
